@@ -24,14 +24,14 @@ public class PecaController {
     private List<PecaModel> pecaModel;
     @PostMapping("cadastrar")
     public ResponseEntity<PecaModel> registarPecas(@RequestBody @Valid PecaModel pecaModel) {
-        log.info("valor fornecedor=={}",pecaModel);
+        //log.info("valor fornecedor=={}",pecaModel);
 
 
 
             pecaService.saveSupply(pecaModel);
-            log.info("m=salvando cadastro fornecedor",pecaModel);
+          //  log.info("m=salvando cadastro fornecedor",pecaModel);
 
-            log.info("m=erro ao cadastrar fornecedor",pecaModel);
+         //   log.info("m=erro ao cadastrar fornecedor",pecaModel);
 
 
 

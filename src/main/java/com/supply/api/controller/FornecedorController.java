@@ -19,14 +19,14 @@ public class FornecedorController {
 public FornecedorService fornecedorService;
     @PostMapping("cadastrar")
     public ResponseEntity<?> registarFronecedor(@RequestBody FornecedorModel fornecedorModel) {
-        log.info("valor fornecedor=={}",fornecedorModel);
+       // log.info("valor fornecedor=={}",fornecedorModel);
 
 
         try {
             fornecedorService.saveSupply(fornecedorModel);
-            log.info("m=salvando cadastro fornecedor",fornecedorModel);
+        //    log.info("m=salvando cadastro fornecedor",fornecedorModel);
         } catch (Exception e) {
-            log.info("m=erro ao cadastrar fornecedor",fornecedorModel);
+        //    log.info("m=erro ao cadastrar fornecedor",fornecedorModel);
 
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("CAMPO NAO PODE SER VAZIO OU NULO");
         }

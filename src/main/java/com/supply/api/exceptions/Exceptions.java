@@ -14,7 +14,8 @@ public class Exceptions {
 @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Errors> NotValid(MethodArgumentNotValidException e){
 
-
-        List<Errors> erro=e.getBindingResult().getFieldErrors().stream().map(x-> buildE);
+    return null;
+     //   List<Errors> erro=e.getBindingResult().getFieldErrors().stream().map(x-> buildE);
     }
+
 }
