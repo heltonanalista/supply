@@ -5,8 +5,11 @@ import com.supply.api.model.PecaModel;
 import com.supply.api.service.FornecedorService;
 import com.supply.api.service.PecaService;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Value;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,9 +19,11 @@ import java.util.List;
 @Log4j2
 @RestController
 @RequestMapping("pecas")
+//ConfigurationProperties(prefix = "data")
+//@PropertySource("classpath:/application.yml}")
 public class PecaController {
-
-
+    //@Value("${data.name}")
+    private String name;
     @Autowired
     public PecaService pecaService;
     private List<PecaModel> pecaModel;
@@ -44,5 +49,10 @@ public class PecaController {
 
 
         return pecaModel;
+    }
+    @GetMapping("teste")
+    public String data() {
+        System.out.println(name);
+            return name;
     }
 }
