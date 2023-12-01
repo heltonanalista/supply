@@ -18,8 +18,7 @@ public class PecaModel {
     private String marca;
     @NotBlank
     private String modelo;
-    @NotNull
-    private Integer quantidade;
+
     @NotNull
     private Double preco;
 }
