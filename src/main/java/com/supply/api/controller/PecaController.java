@@ -50,9 +50,5 @@ public class PecaController {
 
         return pecaModel;
     }
-    @GetMapping("teste")
-    public String data() {
-        System.out.println(name);
-            return name;
-    }
+
 }

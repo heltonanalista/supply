@@ -8,13 +8,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "fornecedor")
-public class FornecedorModel {
+public class ClienteModel {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    Long id;
     private String nome;
     private String cpf;
     private String email;
@@ -23,9 +19,6 @@ public class FornecedorModel {
     private String cidade;
     private String cep;
     private String estado;
-    private String razao_social;
-    private String cnpj;
-
 
 }
 

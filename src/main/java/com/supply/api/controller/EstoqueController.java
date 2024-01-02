@@ -1,11 +1,9 @@
 package com.supply.api.controller;
 
-import com.supply.api.model.DemandaModel;
+
 import com.supply.api.model.EstoqueModel;
-import com.supply.api.model.PecaModel;
-import com.supply.api.repository.EstoqueRepository;
+import com.supply.api.model.PedidoModel;
 import com.supply.api.service.EstoqueService;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +30,7 @@ estoqueService.salvarEstoque(estoqueModel);
     }
 
     @PostMapping("solicitar")
-    public ResponseEntity<DemandaModel> solicitarPeca(@RequestBody DemandaModel demandaModel) {
+    public ResponseEntity<PedidoModel> solicitarPeca(@RequestBody PedidoModel pedidoModel) {
         //log.info("valor fornecedor=={}",pecaModel);
 
 
@@ -41,6 +39,6 @@ estoqueService.salvarEstoque(estoqueModel);
 
 
 
-     return ResponseEntity.status(HttpStatus.CREATED).body(demandaModel);
+     return ResponseEntity.status(HttpStatus.CREATED).body(pedidoModel);
    }
 }

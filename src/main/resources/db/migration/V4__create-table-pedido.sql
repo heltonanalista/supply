@@ -1,6 +1,5 @@
- create table demanda (
+ create table pedido (
        id bigint not null,
-        pecaid bigint,
         quantidade integer,
         primary key (id)
     ) engine=InnoDB;
